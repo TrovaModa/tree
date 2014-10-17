@@ -1,11 +1,16 @@
 {
-  "name": "trovamoda-tree",
-  "version": "1.0.0",
+  "name"       : "trovamoda-tree",
+  "version"    : "1.0.0",
   "description": "A tree to store SEO paths",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+
+  "devDependencies": {
+    "mocha"    : "*",
+    "expect.js": "*"
   },
-  "author": "yawnt <me@yawnt.com>",
-  "license": "MIT"
+
+  "scripts"    : {
+    "test" : "mocha -R spec test/*.test.js"
+  },
+  "author"     : "yawnt <me@yawnt.com>",
+  "license"    : "MIT"
 }
