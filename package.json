@@ -1,0 +1,11 @@
+{
+  "name": "trovamoda-tree",
+  "version": "1.0.0",
+  "description": "A tree to store SEO paths",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yawnt <me@yawnt.com>",
+  "license": "MIT"
+}
