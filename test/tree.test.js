@@ -25,6 +25,12 @@ describe('Tree', function() {
     });
   });
 
+  describe('.children', function() {
+    it('should return children', function() {
+      expect(tree.children.length).to.eql(1);
+    });
+  });
+
   describe('#deleteNode', function() {
     it('should delete a node', function() {
       tree.deleteNode('HEI');
