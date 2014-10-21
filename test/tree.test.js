@@ -50,4 +50,14 @@ describe('Tree', function() {
     });
   });
 
+  describe('#root', function() {
+    it('should go to root', function() {
+      tree.addNode('HAI').addNode('HEI').addNode('HOLA');
+
+      tree.root();
+
+      expect(tree.tree.parent).to.eql(null);
+    });
+  });
+
 });
