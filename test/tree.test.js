@@ -66,4 +66,23 @@ describe('Tree', function() {
     });
   });
 
+  describe('#traverse', function() {
+    it('should enumerate all the paths', function() {
+      var tree2 = t.createTree();
+
+      tree2.addNode('HAI').up();
+      tree2.addNode('HEI').up();
+      tree2.addNode('HOLA').get('HOLA').addNode('HELO').addNode('COCA');
+      tree2.get('COCA').addNode('COLA').get('COLA').addNode('PEPSI');
+      tree2.root();
+
+      expect(tree2.traverse()).to.eql([
+        [ 'ROOT', 'HAI' ],
+        [ 'ROOT', 'HEI' ],
+        [ 'ROOT', 'HOLA', 'HELO' ],
+        [ 'ROOT', 'HOLA', 'COCA', 'COLA', 'PEPSI' ]
+      ]);
+    });
+  });
+
 });
