@@ -66,7 +66,7 @@ describe('Tree', function() {
     });
   });
 
-  describe('#traverse', function() {
+  describe('#forEach', function() {
     it('should enumerate all the paths', function() {
       var tree2 = t.createTree();
 
@@ -76,7 +76,9 @@ describe('Tree', function() {
       tree2.get('COCA').addNode('COLA').get('COLA').addNode('PEPSI');
       tree2.root();
 
-      expect(tree2.traverse()).to.eql([
+      var arr = [];
+      tree2.forEach(function(path) { arr.push(path); });
+      expect(arr).to.eql([
         [ 'ROOT', 'HAI' ],
         [ 'ROOT', 'HEI' ],
         [ 'ROOT', 'HOLA', 'HELO' ],
