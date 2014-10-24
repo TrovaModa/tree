@@ -3,6 +3,10 @@
   "version"    : "1.0.5",
   "description": "A tree to store SEO paths",
 
+  "dependencies": {
+    "lodash": "*"
+  },
+
   "devDependencies": {
     "mocha"    : "*",
     "expect.js": "*"
