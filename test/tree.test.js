@@ -79,10 +79,10 @@ describe('Tree', function() {
       var arr = [];
       tree2.forEach(function(path) { arr.push(path); });
       expect(arr).to.eql([
-        [ 'ROOT', 'HAI' ],
-        [ 'ROOT', 'HEI' ],
-        [ 'ROOT', 'HOLA', 'HELO' ],
-        [ 'ROOT', 'HOLA', 'COCA', 'COLA', 'PEPSI' ]
+        [ 'HAI' ],
+        [ 'HEI' ],
+        [ 'HOLA', 'HELO' ],
+        [ 'HOLA', 'COCA', 'COLA', 'PEPSI' ]
       ]);
     });
   });
@@ -90,10 +90,10 @@ describe('Tree', function() {
   describe('#fromArray', function() {
     it('should create a tree', function() {
       var tree2 = t.fromArray([
-        [ 'ROOT', 'HAI' ],
-        [ 'ROOT', 'HEI' ],
-        [ 'ROOT', 'HOLA', 'HELO' ],
-        [ 'ROOT', 'HOLA', 'COCA', 'COLA', 'PEPSI' ]
+        [ 'HAI' ],
+        [ 'HEI' ],
+        [ 'HOLA', 'HELO' ],
+        [ 'HOLA', 'COCA', 'COLA', 'PEPSI' ]
       ]);
 
       expect(tree2.get('HOLA').get('COCA').get('COLA').get('PEPSI')).to.not.eql(null);
